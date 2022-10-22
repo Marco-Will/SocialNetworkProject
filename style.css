@@ -1,0 +1,519 @@
+html
+{
+    scroll-behavior: smooth;
+
+}
+
+body 
+{
+    margin: 0;
+    /* background-color: rgba(36, 38, 57, 0.643); */
+}
+body a
+{
+    cursor: pointer;
+}
+.dark_mode
+{
+    background-color: #121212e5!important ;
+    color: white;
+}
+
+.dark_mode_invert
+{
+    filter: invert(1);
+}
+.bgr
+{
+    background-color: #FAFAFA;
+}
+/*///////////////////////HEADER */
+
+.header
+{   
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    -webkit-box-shadow: 2px 7.5px 10px 3px #dddddd;
+    -moz-box-shadow: 2px 7.5px 10px 3px #dddddd;
+    box-shadow: 2px 0.5px 10px 3px #dddddd;
+
+}
+.header input
+{
+    height: 30px;
+    width: 190px;
+    margin-left: 157px;
+}
+
+.header h1
+{
+    cursor: pointer;
+    font-family: 'Island Moments', cursive;
+    font-size: 30px;
+}
+
+.profile_picture
+{
+    object-fit: cover;
+    height: 60px;
+    width: 60px;
+    border-radius:50%;
+    cursor: pointer;
+}
+
+.nav_picture
+{
+    object-fit: cover;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.nav_icons
+{
+    object-fit: contain;
+    height: 30px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+ /*///////////////////////////////// MAIN CONTENT PAGE  */
+
+
+ .content 
+ {
+    display: flex;
+    padding-top: 20px;
+    font-family: 'Cairo', sans-serif;
+    
+
+ }
+
+ .main 
+ {  
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+.news
+{
+    display: flex;
+    width:450px ;
+    -webkit-box-shadow: 0.5px -2px 14.5px 14px #dddddd;
+    -moz-box-shadow: 0.5px -2px 14.5px 14px #dddddd;
+    box-shadow: 0.5px -2px 14.5px 2px #dddddd;
+    border-radius: 20px;
+    height:100px;
+    align-items: center;
+    overflow-y: scroll;
+    overflow-x:scroll;
+    
+}
+
+.new_posts
+{   
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.content_post
+{
+    margin-left: 140px;
+}
+
+.post 
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    -webkit-box-shadow: -0.5px 2.5px 8.5px 10.5px #dddddd;
+    -moz-box-shadow: -0.5px 2.5px 8.5px 10.5px #dddddd;
+    box-shadow: -0.5px 2.5px 8.5px 2px #dddddd;
+}
+
+.post_header
+{
+    display: flex;
+    align-items: center;  
+    padding: 10px;  
+    justify-content: space-between;
+}
+
+.user   
+{
+    display: flex;
+    align-items: center;
+}
+.user span 
+{
+    margin-left: 10px;
+}
+
+.drop_down
+{
+    object-fit: contain;
+    height: 30px;
+    cursor: pointer;
+}
+
+.post_img
+{
+   object-fit: cover;
+   max-height: 500px;
+   width: 450px;
+}
+
+.test_img
+{
+    width: 100%;
+    height: 100%;
+}
+
+
+.post_comment
+{
+    max-width: 400px;
+    margin-left: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.like_comment_share
+{
+    display: flex;
+   
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.like_comment_share img 
+{
+    object-fit: contain;
+    height: 30px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.like_number
+{
+    margin-left: 20px;
+    
+}
+
+.see_comments
+{
+   overflow-y: scroll;
+   overflow-x: hidden;
+   max-height: 140px;
+   border-bottom: 1px solid;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.new_comment
+{
+    padding: 10px;
+}
+
+.comment_input
+{   
+    padding-bottom: 20px;
+    margin-top: 20px;
+    min-height: 60px;
+    overflow-y: auto;
+    word-wrap:break-word;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;  
+}
+
+.comment_input textarea 
+{
+    font-size: 16px;
+     border-width: 1px;
+     border-color: #CCCCCC;
+     background-color: #FFFFFF;
+     color: #000000;
+     border-style: solid;
+     border-radius: 13px;
+     
+}
+
+
+
+
+
+
+.comment_input button 
+{
+    
+    width: 200px;
+    margin-top: 20px;
+    background-color: #1b63a79b;
+    border: 0;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, .1) 0 2px 4px 0;
+    box-sizing: border-box;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Akzidenz Grotesk BQ Medium", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    outline: none;
+    outline: 0;
+    padding: 10px 25px;
+    text-align: center;
+    transform: translateY(0);
+    transition: transform 150ms, box-shadow 150ms;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+}
+
+.comment_input button:hover {
+  box-shadow: rgba(0, 0, 0, .15) 0 3px 9px 0;
+  transform: translateY(-2px);
+}
+
+
+
+
+
+
+
+
+
+/* ////////////////////SIDE BAR  */
+
+
+.content_sidebar
+{
+    margin-left: 50px;
+    margin-right: 20px;
+    width: 300px;
+    -webkit-box-shadow: 0 2px 19.5px 7px #dddddd;
+    -moz-box-shadow: 0 2px 19.5px 7px #dddddd;
+    box-shadow: 0 2px 19.5px 2px #dddddd;
+    max-height: 600px;
+    border-radius: 20px;
+}
+
+.current_acc
+{   
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.content_sidebar h2 
+{
+    text-align: center;
+}
+.side_bar_end
+{
+    margin-top: 50px;
+    text-align: center;
+    
+}
+
+.side_bar_end a 
+{
+    padding-right: 10px;
+}
+
+.copyright
+{
+    text-align: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.follow_line
+{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.mobile_hide
+{
+    display: none;
+}
+@media (min-width: 768px) 
+{
+    .comment_input button {
+      padding: 10px 30px;
+    }
+}
+
+@media (max-width:900px )
+{
+    .content_sidebar
+    {
+        display: none;
+    }
+
+   .content_post 
+   {
+    margin-left: 0;
+    width: 350px;
+    margin-top: 80px;
+   }
+
+   .news_window
+   {
+    width: 350px;
+   }
+
+   .post_img 
+   {
+    width: 350px;
+    /* height: 400px;  */
+    object-fit: contain;
+   }
+
+   .post
+   {
+    width: 350px;
+    margin-bottom: 54px;
+    
+   }
+
+   .post_container
+   {
+    width: 350px;
+   }
+
+   .news
+   {
+    width: 350px;
+   }
+
+   .header 
+   {
+    
+    position: fixed;
+    top: 0%;
+    width:100vw ;
+    justify-content: center;
+    align-items: center;
+   }
+
+   .header input
+   {
+    margin-right: 0;
+    margin-bottom: 0!important;
+    margin-left: 10px;
+   }
+
+   .onoffswitch 
+   {
+    display: none;
+   }
+
+   .mobile_navbar
+   {
+    position: fixed;
+    bottom: 0%;
+    z-index: 2;
+    background-color:white;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   }
+
+   .mobile_navbar div 
+   {
+    display: flex;
+   }
+
+   .mobile_navbar button 
+   {
+    font-size: 10px;
+    margin-top: 5px;
+    margin-left: 10px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0;
+    background-color: #000000c6;
+    color: white;
+   }
+    
+   .hide_nav
+   {
+    display: none;
+   }
+   .header h1 
+   {
+    font-size: 25px;
+   }
+
+   .header input
+   {
+        height: 20px;
+        margin-bottom: 15px;
+   }
+
+   .comment_input textarea
+   {
+    width: 300px;
+   }
+   
+}
+
+
+  /* DARKMODE BUTTON */
+
+  .onoffswitch {
+    position: relative; width: 111px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+    
+}
+.onoffswitch-checkbox {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+.onoffswitch-label {
+    display: block; overflow: hidden; cursor: pointer;
+    border: 2px solid #999999; border-radius: 20px;
+}
+.onoffswitch-inner {
+    display: block; width: 200%; margin-left: -100%;
+    transition: margin 0.3s ease-in 0s;
+}
+.onoffswitch-inner:before, .onoffswitch-inner:after {
+    display: block; float: left; width: 50%; height: 30px; padding: 0; line-height: 30px;
+    font-size: 14px; color: white; font-family: Trebuchet, Arial, sans-serif; font-weight: bold;
+    box-sizing: border-box;
+}
+.onoffswitch-inner:before {
+    content: "Darkmode";
+    padding-left: 10px;
+    background-color: #34A7C1; color: #FFFFFF;
+}
+.onoffswitch-inner:after {
+    content: "Darkmode OFF";
+    padding-right: 10px;
+    background-color: #EEEEEE; color: #999999;
+    text-align: right;
+}
+.onoffswitch-switch {
+    display: block; width: 16px; margin: 7px;
+    background: #FFFFFF;
+    position: absolute; top: 0; bottom: 0;
+    right: 77px;
+    border: 2px solid #999999; border-radius: 20px;
+    transition: all 0.3s ease-in 0s; 
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
+    margin-left: 0;
+}
+.onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
+    right: 0px; 
+}

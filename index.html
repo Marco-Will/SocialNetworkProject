@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posterino</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+    <link rel="icon" type="image/png" sizes="16x16"  href="icons/favicon-16x16.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Island+Moments&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Island Moments', cursive; -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@200&display=swap" rel="stylesheet"> 
+    <!-- font-family: 'Cairo', sans-serif; -->
+
+</head>
+
+<body onload="render(),renderNewsFeed(),renderSidebar()">
+    
+    <div id="bgr" class="bgr">
+        <!-- HEADER -->
+        <div id="header" class="header">
+
+            <h1> <i>Posterino</i></h1>
+            <form onsubmit="onkeydown=filterPosts(); return false;">
+             <input  id="search" type="text" placeholder="🔍 Search ">
+            </form>
+
+            <div class="hide_nav">
+                
+                <img  id="navIcon" class="nav_icons" src="icons/house-48.png" alt="">
+                <img id="navIcon2" class="nav_icons" src="icons/chat-4-48.png" alt="">
+                <img id="navIcon3" class="nav_icons" src="icons/comments-48.png" alt="">
+               
+                <img class="profile_picture" src="img/user1.png" alt="">
+                
+            </div>
+            <div   class="onoffswitch ">
+                <input onclick="darkMode()"   type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" tabindex="0" checked>
+                <label   class="onoffswitch-label" for="myonoffswitch">
+                    <span  class="onoffswitch-inner"></span>
+                    <span  class="onoffswitch-switch"></span>
+                </label>
+            </div>
+        </div>
+        <!-- MAIN CONTENT PAGE -->
+        <div class="content">
+            
+            <div class="main">
+                <!-- POST SECTION -->
+                <div class="content_post">
+
+                    <div id="newsWindow" class="news">      
+                    </div>
+                        <div id="postContainer" class="post_container">      
+                    </div>
+                </div>
+
+                <!-- SIDE BAR SECTION -->
+                <div class="content_sidebar">
+
+                    <div class="current_acc">
+
+                        <img class="profile_picture" src="img/user1.png" alt="">
+                        <span>Marco</span>
+                        <a  >Change </a>
+
+                    </div>
+
+                    <h2>Other User </h2>
+
+                    <div id="suggestionUser" class="suggestion_user">
+
+                        
+                       
+                        
+                    </div>
+
+                    <div class="side_bar_end">
+                        <a >Info</a>
+                        <a >Help</a>
+                        <a >API</a>
+                        <a >Language</a>
+                    </div>
+
+                    <div class="copyright">© Posterino</div>
+
+                </div>
+
+            </div>    
+        </div>
+    </div>
+
+    <div id="mobileNavBar" class="mobile_navbar mobile_hide">
+        <div>
+            <img id="mobileNavIcon" class="nav_icons" src="icons/house-48.png" alt="">
+            <img id="mobileNavIcon2" class="nav_icons" src="icons/chat-4-48.png" alt="">
+            <img id="mobileNavIcon3" class="nav_icons" src="icons/comments-48.png" alt="">
+            <img class="nav_picture" src="img/user1.png" alt="">
+            <button onclick="darkMode()">DARKMODE</button>
+        </div>
+       
+    </div>
+
+  
+</body>
+</html>
