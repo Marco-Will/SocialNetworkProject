@@ -7,7 +7,7 @@ let posts =
     'desc': '🎮time for some rounds🎮',
     "comment": [],
     "likes":  '145',
-    "liked":  /* [false] */ false 
+    "liked":  false 
   },
 
   {
@@ -17,7 +17,7 @@ let posts =
     'desc': 'Fresh and tasty! ',
     "comment": [],
     "likes":  [355],
-    "liked":/*  [false] */   false 
+    "liked":   false 
   },
 
   {
@@ -27,7 +27,7 @@ let posts =
     'desc': 'Print era over soon? ',
     "comment": [],
     "likes":  [23],
-    "liked":  /* [false] */  false 
+    "liked":  false 
   },
 
   {
@@ -37,7 +37,7 @@ let posts =
     'desc': '🌍 Vacations!!! ✈️',
     "comment": [],
     "likes":  [53],
-    "liked":  /* [false] */  false 
+    "liked":  false 
   },
 
   {
@@ -47,7 +47,7 @@ let posts =
     'desc': 'Time to relax^^',
     "comment": [],
     "likes":  [66],
-    "liked":  /* [false] */ false 
+    "liked":   false 
   },
 
   {
@@ -57,7 +57,7 @@ let posts =
     'desc': 'Amazing view and vibes...',
     "comment": [],
     "likes":  [75],
-    "liked": /* [false] */ false 
+    "liked": false 
   },
 
   {
@@ -67,14 +67,21 @@ let posts =
     'desc': 'New car, who wants a ride? ;D',
     "comment": [],
     "likes":  [687],
-    "liked": /* [false]  */ false 
+    "liked": false 
   },
 ]
-let user = 'Marco';
-let follow = ['Follow'];
-let darkmode = false;
-/* let likes = [145, 504,]; */
 
+let user = 'Marco';
+
+
+let follow = false;
+let otherUser= ['Francis','Mike','Jack']
+let otherUserPicture= [`<img class="profile_picture" src="img/user2.jpg" alt="">`,`<img class="profile_picture" src="img/newuser2.jpg" alt="">`,`<img class="profile_picture" src="img/newuser3.jpg" alt="">`]
+
+let darkmode = false;
+
+
+ 
 
 function filterPosts()//filter posts by names
 {
@@ -234,38 +241,35 @@ function render() //render posts and newsfeed
 
  function followUser(i)
 {
-  getId(`followText${i}`).innerHTML = 'Unfollow ';
+  if(!follow == true)
+  {
+    getId(`followText${i}`).innerHTML = 'Unfollow ';
+    follow = true;
+  }
+  else
+  {
+    getId(`followText${i}`).innerHTML = 'Follow ';
+    follow = false;
+  }
+
 } 
 
 function renderSidebar()//render sidebar with other user
 {
-  for (let i = 0; i < follow.length; i++) {
-    let followuser = follow[i];
+  
+  for (let i = 0; i < otherUser.length; i++) {
+    let otheruser = otherUser[i];
+    let profilepicture = otherUserPicture[i];
 
-    getId('suggestionUser').innerHTML = /*html*/`
-  <div class="current_acc">
+    getId('suggestionUser').innerHTML += /*html*/`
+    <div class="current_acc">
 
-    <img class="profile_picture" src="img/user2.jpg" alt="">
-    <span>Francis</span>
-    <a class="follow_line" onclick="followUser(${i})" id="followText${i}" >${followuser}</a>
+    ${profilepicture}
+    
+    <span>${otheruser}</span>
+    <a class="follow_line" onclick="followUser(${i})" id="followText${i}" >Follow</a>
 
-  </div>
-
-  <div class="current_acc">
-
-    <img class="profile_picture" src="img/newuser2.jpg" alt="">
-    <span>Mike</span>
-    <a class="follow_line" onclick="followUser(${i})" id="followText${i}" >${followuser}</a>
-
-  </div>
-
-  <div class="current_acc">
-
-    <img class="profile_picture" src="img/newuser3.jpg" alt="">
-    <span>Jack</span>
-    <a class="follow_line" onclick="followUser(${i})" id="followText${i}" >${followuser} </a>
-
-  </div> `
+  </div>`
     
   }
   
@@ -279,7 +283,7 @@ function likeComment(i)//like and dislike posts
   if(!liked)
   {
     posts[i]['liked'] = true;
-    /* liked = true; */ //warum geht es so nicht?
+    
     like.src = 'icons/fullHeart.png'
     posts[i]['likes']++;
     
@@ -287,7 +291,7 @@ function likeComment(i)//like and dislike posts
 
   else 
   {
-    /* liked = false; */ //warum geht es so nicht?
+    
     posts[i]['liked'] = false;
     like.src = 'icons/empty_heart.png'
     posts[i]['likes']--;
@@ -411,3 +415,5 @@ function darkMode()
     getId('mobileNavIcon2').classList.remove('dark_mode_invert');
     getId('mobileNavIcon3').classList.remove('dark_mode_invert');
   }
+
+
